@@ -1,0 +1,17 @@
+.example-card {
+    width: 100%;
+    margin: 20px;
+}
+
+.example-card .avatar {
+    font-size: 36px
+}
+
+.example-card .title {
+    position: relative;
+    top: -7px;
+}
+
+.example-card .bolder {
+    font-weight: 600;
+}

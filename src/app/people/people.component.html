@@ -1,0 +1,20 @@
+<menu></menu>
+<mat-grid-list cols="4" rowHeight="240px">
+  <mat-grid-tile *ngFor="let p of people" [colspan]="responsiveCols">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar><i class="material-icons avatar">account_circle</i></div>
+            <mat-card-title><h3 class="title">{{p.name}} {{p.surname}}</h3></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Gender: <span class="bolder">{{p.gender}}</span></p>
+            <p>Best Friend: <span class="bolder">{{p.best_friend}}</span></p>
+        </mat-card-content>
+        <mat-card-actions class="actions">
+            <button mat-mini-fab color="primary" (click)="editPeople(p)"><i class="material-icons">mode_edit</i></button>
+            <button mat-mini-fab color="warn" (click)="openDialog(p)"><i class="material-icons">delete</i></button>
+        </mat-card-actions>
+
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

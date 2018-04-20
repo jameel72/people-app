@@ -1,0 +1,29 @@
+<div class="form-wrapper">
+    <h3>Add New People</h3>
+    <form class="example-form" novalidate #form="ngForm" (ngSubmit)="submitPeople(form)">
+      <mat-form-field class="example-full-width">
+        <input matInput name="name" placeholder="Name" required [(ngModel)]="newPeople.name">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput name="surname" placeholder="Surname" required [(ngModel)]="newPeople.surname">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <mat-select placeholder="Gender" name="gender" required [(ngModel)]="newPeople.gender">
+            <mat-option *ngFor="let gender of genders" [value]="gender.value">
+              {{ gender.viewValue }}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Best Friend" aria-label="Best Friend" name="best_friend" [matAutocomplete]="auto" required [(ngModel)]="newPeople.best_friend">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let name of peopleNames" [value]="name">
+              <span>{{ name }}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <div class="div-submit">
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+      </div>
+    </form>
+</div>

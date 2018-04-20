@@ -1,0 +1,29 @@
+.form-wrapper {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper {
+    text-align: center
+}
+
+.form-wrapper .div-submit {
+    text-align: center
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
